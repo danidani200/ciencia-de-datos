@@ -1,0 +1,12 @@
+import pandas as pd
+import streamlit as st
+import matplotlib.pylot as ptl
+
+titanic_data = pd.read_csv("https://raw.githubusercontent.com/adsoftsito/ciencia-datos/refs/heads/main/titanic.csv")
+st.dataframe(titanic_data)
+st.header("Data Description")
+
+fig, ax = plt.subplots()
+ax.hist(titanic_data.fare)
+st.header("Histograma del Titanic")
+st.pyplot(fig)
